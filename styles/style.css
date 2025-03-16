@@ -168,7 +168,7 @@ ol {
   background-color: #fff;
 }
 
-.search-form__checkbox-list .search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
