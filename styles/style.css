@@ -10,7 +10,6 @@ html {
 
 .page {
   display: flex;
-  height: 100vh;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -39,7 +38,6 @@ ol {
   list-style: none;
 }
 
-/* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -54,7 +52,6 @@ ol {
 
 .content {
   display: grid;
-  height: 534px;
   grid-template-columns: 711px 399px;
   grid-template-areas: "result content__details";
   margin: auto;
@@ -171,7 +168,7 @@ ol {
   background-color: #fff;
 }
 
-.search-form__checkbox-list .search-form__label:hover {
+.search-form__checkbox-list .search-form__label-text:hover {
   text-decoration: underline;
   text-decoration-thickness: 1px;
 }
@@ -229,14 +226,16 @@ ol {
 
 .content__list-container {
   height: 298px;
-  overflow: scroll;
-  overflow-x: hidden;
+  width: 100%;
+  overflow: auto;
   position: relative;
+  padding: 0 3px;
 }
 
 .content__list {
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 30px;
 }
 
@@ -246,12 +245,16 @@ ol {
 }
 
 .content__card-link {
+  display: block;
   color: #fff;
   text-decoration: none;
 }
 
+.content__card-link:active {
+  background-color: #545050;
+}
+
 .content__card-link_current {
-  display: block;
   background-color: #545050;
 }
 
@@ -271,7 +274,7 @@ ol {
 }
 
 .content__video-card-description-container {
-  margin-left: 2px;
+  max-width: 196px;
   flex-grow: 1;
   overflow: hidden;
 }
@@ -281,6 +284,7 @@ ol {
   text-transform: uppercase;
   font-size: 30px;
   line-height: 1;
+  overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 4px;
 }
@@ -294,13 +298,13 @@ ol {
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  margin-right: 2px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .more-button {
   width: 100%;
   padding: 6px 0;
-  margin-top: 30px;
+  margin: 28px 0 2px;
 }
